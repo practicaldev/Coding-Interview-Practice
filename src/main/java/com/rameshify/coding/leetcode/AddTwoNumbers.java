@@ -4,7 +4,6 @@ package com.rameshify.coding.leetcode;
  * Leet Code #2: Add Two Numbers
  *
  * @author Ramesh Sakibanda
- * @link leetcode.com/problems/two-sum
  * @see <a href="https://leetcode.com/problems/add-two-numbers">Add Two Numbers</a>
  */
 public class AddTwoNumbers {

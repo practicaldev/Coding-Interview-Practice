@@ -3,7 +3,6 @@ package com.rameshify.coding.leetcode;
 /**
  * Leet Code #1: Two Sum
  * @see <a href="https://leetcode.com/problems/two-sum">Two Sum</a>
- * @link leetcode.com/problems/two-sum
  * @author Ramesh Sakibanda
  */
 public class TwoSum {
