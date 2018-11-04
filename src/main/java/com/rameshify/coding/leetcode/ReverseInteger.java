@@ -8,23 +8,22 @@ package com.rameshify.coding.leetcode;
  */
 public class ReverseInteger {
   public int reverse(int x) {
-    int rev = 0;
-    int prev_num = 0;
-    boolean negative = false;
-    if (x < 0) {
-      negative = true;
-      x *= -1;
-    }
-    while (x > 0) {
-      int rem = x % 10;
-      rev = rev * 10 + rem;
-      x /= 10;
-      if ((rev - rem) / 10 != prev_num) {
+    int reversed = 0;
+    int t;
+    int tenthOfMax = Integer.MAX_VALUE / 10;
+    int tenthOfMin = Integer.MIN_VALUE / 10;
+    while (x != 0) {
+      int leftOver = x % 10;
+      /* determine if the number is on the verge of overflowing */
+      if (reversed > tenthOfMax || reversed == tenthOfMax && leftOver > 7) {
+        return 0;
+      }else if (reversed < tenthOfMin || reversed == tenthOfMin && leftOver < -8) {
         return 0;
       }
-      prev_num = rev;
+      reversed = reversed * 10 + leftOver;
+      x /= 10;
     }
-    return negative ? rev * -1 : rev;
+    return reversed;
   }
 
   public static void main(String[] args) {
@@ -33,5 +32,7 @@ public class ReverseInteger {
     System.out.println(reverseInteger.reverse(-123));
     System.out.println(reverseInteger.reverse(Integer.MAX_VALUE));//
     System.out.println(reverseInteger.reverse(Integer.MIN_VALUE));//0
+    System.out.println(Integer.MAX_VALUE);
+    System.out.println(Integer.MIN_VALUE);
   }
 }

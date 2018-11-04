@@ -40,14 +40,4 @@ public class LongestSubstringWithoutRepeatingCharacters {
     }
     return Math.max(max, length - start);
   }
-
-  public static void main(String[] args) {
-    LongestSubstringWithoutRepeatingCharacters withoutRepeatingCharacters = new LongestSubstringWithoutRepeatingCharacters();
-    System.out.println(withoutRepeatingCharacters.lengthOfLongestSubstring("abcabcbb"));
-    System.out.println(withoutRepeatingCharacters.lengthOfLongestSubstring("bbbbb"));
-    System.out.println(withoutRepeatingCharacters.lengthOfLongestSubstring("pwwkew"));
-    System.out.println(withoutRepeatingCharacters.lengthOfLongestSubstring(" "));
-    System.out.println(withoutRepeatingCharacters.lengthOfLongestSubstring(" a abc abcd a "));
-    System.out.println(withoutRepeatingCharacters.lengthOfLongestSubstring("dvdf"));
-  }
 }

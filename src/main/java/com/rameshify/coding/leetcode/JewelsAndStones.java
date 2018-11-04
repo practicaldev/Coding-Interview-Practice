@@ -9,17 +9,17 @@ package com.rameshify.coding.leetcode;
 public class JewelsAndStones {
 
   public int numJewelsInStones(String J, String S) {
-    int[] jewels = new int[128];
-    int count = 0;
-    // count all stones.
-    for (char a : S.toCharArray()) {
-      jewels[a]++;
+    int[] stonesCount = new int[128];
+    int jewelCount = 0;
+    // stonesCount stonesCount.
+    for (char stone : S.toCharArray()) {
+      stonesCount[stone]++;
     }
-    // add jewels count.
-    for (char a : J.toCharArray()) {
-      count += jewels[a];
+    /* stonesCount jewels. */
+    for (char jewel : J.toCharArray()) {
+      jewelCount += stonesCount[jewel];
     }
-    return count;
+    return jewelCount;
   }
 
   public static void main(String[] args) {
